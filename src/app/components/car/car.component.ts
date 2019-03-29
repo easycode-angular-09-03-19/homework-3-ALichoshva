@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./car.component.css']
 })
 export class CarComponent {
-  public carName: string;
-  private mileage: number;
-  public fuelTankCapacity: number;
-  private currentAmountOfGas: number;
-  public specifications: string[];
-
-  public car = {
+  public car: {
+    carName: string;
+    mileage: number; 
+    fuelTankCapacity: number;
+    currentAmountOfGas: number; 
+    specifications: string[]
+  } = {
     carName: 'BMW',
     mileage: 0,
     fuelTankCapacity: 20,
