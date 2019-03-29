@@ -1,0 +1,20 @@
+<div [className]="'car-comp'">
+  <p>Information about the car</p>
+  <div>
+    <ul>
+      <li [textContent]="'Carname: ' + car.carName"></li>
+      <li [textContent]="'Mileage: ' + car.mileage"></li>
+      <li [textContent]="'Fuel tank capacity: ' + car.fuelTankCapacity"></li>
+      <li [textContent]="'Current amount of gas: ' + car.currentAmountOfGas"></li>
+    </ul>
+  </div>
+  <button [className]="'waves-effect waves-light btn'" (click)="go()">Go</button>
+  <button [className]="'waves-effect waves-light btn'" (click)="fillUp()" *ngIf="car.currentAmountOfGas < 5">Fill up</button>
+  <p>Technical specification of the car</p>
+  <div>
+    <ul>
+      <li *ngFor="let spec of car.specifications"> {{ spec }}</li>
+    </ul>
+  </div>
+</div>
+
